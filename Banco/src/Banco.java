@@ -14,7 +14,7 @@ public class Banco {
 
 	public static void main(String[] args) throws IOException {
 
-		//	criaConta(1, "Fulano de Tal", "Rua Sem Fim Algum XX");
+		//	criaConta(1, "Fulano de Tal", "Rua Sem Fim Algum");
 
 		carregaClientes();
 		carregaSaldos();
