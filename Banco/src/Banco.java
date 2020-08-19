@@ -35,37 +35,37 @@ public class Banco {
 
 	static void criaConta (int numConta, String nomeCliente, String endereco) {
 		if (clientes[numConta] != null)
-			System.out.println("NÃºmero de conta jÃ¡ utilizado!!");
+			System.out.println("Número de conta já utilizado!!");
 		else {
 			clientes[numConta] = nomeCliente;
 			enderecos[numConta] = endereco;
-			System.out.println("Conta "+ numConta + " incluida com sucesso");
+			System.out.println("Conta "+ numConta + " incluída com sucesso");
 		} 
 	} 
 
 	static void excluiConta (int numConta) {
 		if (clientes[numConta] == null)
-			System.out.println("NÃºmero de conta inexistente!!");
+			System.out.println("Número de conta inexistente!!");
 		else {
 			clientes[numConta] = null;
 			saldos[numConta] = 0.00;
-			System.out.println("Conta "+ numConta + " excluÃ­da com sucesso!!");
+			System.out.println("Conta "+ numConta + " excluída com sucesso!!");
 		} 
 	} 
 
 
 	static void deposita (int numConta, double valor) {
 		if (clientes[numConta] == null) 
-			System.out.println("NÃºmero de conta inexistente!!");
+			System.out.println("Número de conta inexistente!!");
 		else {
 			saldos[numConta] = saldos[numConta] + valor;
-			System.out.println("DepÃ³sito efetuado com sucesso na conta " + numConta );
+			System.out.println("Depósito efetuado com sucesso na conta " + numConta );
 		}
 	} 
 
 	static void saque (int numConta, double valor) {
 		if (clientes[numConta] == null) 
-			System.out.println("NÃºmero de conta inexistente!!");
+			System.out.println("Número de conta inexistente!!");
 		else {
 			if (saldos[numConta] < valor)
 				System.out.println("Saldo insuficiente na conta " + numConta );
@@ -78,7 +78,7 @@ public class Banco {
 
 	static void transferencia (int numContaOrigem, int numContaDestino, double valor) {
 		if ((clientes[numContaOrigem] == null) ||  (clientes[numContaDestino] == null)){
-			System.out.println("NÃºmero de conta origem ou destino inexistente!!");
+			System.out.println("Número de conta origem ou destino inexistente!!");
 			return;
 		}
 		if (saldos[numContaOrigem] < valor)
@@ -86,7 +86,7 @@ public class Banco {
 		else {	
 			saldos[numContaOrigem] = saldos[numContaOrigem] - valor;
 			saldos[numContaDestino] = saldos[numContaDestino] + valor;
-			System.out.println("TransferÃªncia efetuada com sucesso da conta " + numContaOrigem +
+			System.out.println("Transferência efetuada com sucesso da conta " + numContaOrigem +
 					" para " +  numContaDestino );
 		}
 	}
@@ -94,7 +94,7 @@ public class Banco {
 
 	static void consultaSaldo (int numConta) {
 		if (clientes[numConta] == null) 
-			System.out.println("NÃºmero de conta inexistente!!");
+			System.out.println("Número de conta inexistente!!");
 		else {
 			System.out.println("Saldo da conta " + numConta + ": " + saldos[numConta]);
 		}
