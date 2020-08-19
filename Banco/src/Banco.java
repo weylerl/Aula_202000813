@@ -39,7 +39,7 @@ public class Banco {
 		else {
 			clientes[numConta] = nomeCliente;
 			enderecos[numConta] = endereco;
-			System.out.println("Conta "+ numConta + " incluida com sucesso!!");
+			System.out.println("Conta "+ numConta + " incluida com sucesso");
 		} 
 	} 
 
