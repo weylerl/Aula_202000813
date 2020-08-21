@@ -21,8 +21,9 @@ public class Banco {
 		imprimeArrays();
 		quantidadeContas();
 
-//		criaConta(7, "Onofre", "Rua da Casa");
-//		deposita(7, 100.20);
+//		criaConta(2, "Saulo", "Rua B");
+		deposita(2, 200.00);
+		saque(2,50.00);
 	
 //		excluiConta(3);
 		
